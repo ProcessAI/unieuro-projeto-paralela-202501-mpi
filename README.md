@@ -25,13 +25,17 @@ if rank == 0:
     comm.send(data, dest=1)  # Envia a mensagem para o processo 1
 elif rank == 1:
     data = comm.recv(source=0)  # Recebe a mensagem do processo 0
-    print(f"Processo {rank} recebeu: {data}")´
+    print(f"Processo {rank} recebeu: {data}")
 
 ```
 
 ### Para executar um programa python com MPI:
 
 mpiexec -n 2 python nome_do_arquivo.py
+
+No powershell execute da seguinte forma:
+
+& "C:\Program Files\Microsoft MPI\Bin\mpiexec.exe" -n 2 python .\testempi.py
 
 Onde 2 representa o número de processos desejados.
 
