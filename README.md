@@ -6,7 +6,8 @@ O MPI (Message Passing Interface) é um modelo de comunicação utilizado para p
 
 ## Código Exemplo em Python
 
-```from mpi4py import MPI
+```
+from mpi4py import MPI
 
 # Obtém o comunicador
 comm = MPI.COMM_WORLD
